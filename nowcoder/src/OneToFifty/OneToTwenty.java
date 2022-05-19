@@ -20,6 +20,7 @@ public class OneToTwenty {
         //根据不同情况选择不同的算法
         //---------------
         //---
+        //hot-fix
         long start1 = System.currentTimeMillis();
         System.out.println(getcm2(7,5));
         long end1 = System.currentTimeMillis();
