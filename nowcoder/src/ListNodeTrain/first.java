@@ -17,7 +17,11 @@ class ListNode {
 }
 public class first {
 
+    //无头结点
     public ListNode ReverseList(ListNode head) {
+        if(head==null){
+            return null;
+        }
         ListNode next=null;
         ListNode pre=null;
         while(head!=null){
@@ -26,10 +30,30 @@ public class first {
             pre=head;
             head=next;
         }
+
+        return pre;
+    }
+    //有头结点
+    public static ListNode reveereList1(ListNode head) {
         if(head==null){
             return null;
         }
-        return pre;
+        ListNode preHead=new ListNode(-1);
+        preHead.next=head;
+        ListNode cur=preHead.next;
+        ListNode next;
+        while(cur.next!=null){
+            next=cur.next;
+            cur.next=next.next;
+            next.next=preHead.next;
+            preHead.next=next;
+        }
+        return preHead.next;
+    }
+
+    public static void main(String[] args) {
+        ListNode node1=null;
+        reveereList1(node1);
     }
 
 
