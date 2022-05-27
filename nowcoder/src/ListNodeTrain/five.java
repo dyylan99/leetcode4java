@@ -54,7 +54,7 @@ public class five {
     }
 
     /**
-     *既然分两段解决不了,那就分到不能分为止:
+     *既然分两段解决不了,那就分到不能分为止:递归分治,两两划分,最后合并
      */
     public ListNode5 mergeKLists2(ArrayList<ListNode5> lists){
         if(lists==null||lists.size()==0){
@@ -68,7 +68,10 @@ public class five {
         }
 
         int mid=left+((right-left)>>1);
-        return merge(cutIntoTwo(lists,left,mid),cutIntoTwo(lists,mid+1,right));
+        //return merge(cutIntoTwo(lists,left,mid),cutIntoTwo(lists,mid+1,right));
+        ListNode5 leftList=cutIntoTwo(lists,left,mid);
+        ListNode5 rightList=cutIntoTwo(lists,mid+1,right);
+        return merge(leftList,rightList);
     }
     public ListNode5 merge(ListNode5 node1,ListNode5 node2){
         ListNode5 res=new ListNode5(0);
