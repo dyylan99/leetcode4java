@@ -9,7 +9,7 @@ package ListNodeTrain;
 
 /**
  * 思路:
- * 1.长度相同,则只需一个循环
+ * 1.
  * 2.
  */
  class ListNode4 {
