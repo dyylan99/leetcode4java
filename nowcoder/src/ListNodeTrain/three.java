@@ -16,30 +16,19 @@ package ListNodeTrain;
  * 3.pre指针始终指向正在返转的链表的头一个元素
  * 4.Next指针指向的是cur指针的下一个节点,且next指针和pre指针构建关系
  */
-class ListNode3 {
-     int val;
-     ListNode3 next = null;
-     ListNode3(int val,ListNode3 node){
-         this.val = val;;
-         this.next=node;
-     }
-     ListNode3(){
 
-     }
-   }
 public class three {
-    public static ListNode3 reverseKGroup (ListNode3 head, int k) {
-        ListNode3 preHead = new ListNode3();
-        preHead.val = -1;
+    public static ListNode reverseKGroup (ListNode head, int k) {
+        ListNode preHead = new ListNode(-1);
         preHead.next = head;
         //遍历指针,用于找到第k个节点,找到就反转前面k个节点,找不到就不反转
-        ListNode3 count= head;
+        ListNode count= head;
         int t=0;
         //Next节点用于保存cur的下一个节点,被反转后它在pre节点的后面
-        ListNode3 Next;
+        ListNode Next;
         //
-        ListNode3 cur = preHead.next;
-        ListNode3 pre = preHead;
+        ListNode cur = preHead.next;
+        ListNode pre = preHead;
            while(count!=null) {
                count = count.next;
                t++;
@@ -58,17 +47,5 @@ public class three {
         return preHead.next;
     }
 
-    public static void main(String[] args) {
-        ListNodeTrain.ListNode3 node5=new ListNode3(5,null);
-        ListNodeTrain.ListNode3 node4=new ListNode3(4,node5);
-        ListNodeTrain.ListNode3 node3=new ListNode3(3,node4);
-        ListNode3 node2=new ListNode3(2,node3);
-        ListNode3 Node1=new ListNode3(1,node2);
-        ListNode3 listNode3 = reverseKGroup(Node1, 2);
-        while(listNode3!=null){
-            System.out.println(listNode3.val);
-            listNode3=listNode3.next;
-        }
-    }
 
 }

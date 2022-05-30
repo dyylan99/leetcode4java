@@ -12,19 +12,12 @@ package ListNodeTrain;
  * 1.
  * 2.
  */
- class ListNode4 {
-    int val;
-    ListNode4 next = null;
 
-    ListNode4(int val) {
-        this.val = val;
-    }
-}
 public class four {
-    public  static  ListNode4 Merge(ListNode4 list1,ListNode4 list2) {
+    public  static  ListNode Merge(ListNode list1,ListNode list2) {
 
-        ListNode4 res=new ListNode4(0);
-        ListNode4 work=res;
+        ListNode res=new ListNode(0);
+        ListNode work=res;
         while(list1!=null&&list2!=null){
                 if (list1.val <= list2.val) {
                     work.next = list1;
@@ -46,7 +39,7 @@ public class four {
 
     }
     //递归
-    public  static ListNode4  merge1(ListNode4 list1,ListNode4 list2){
+    public  static ListNode  merge1(ListNode list1,ListNode list2){
         if(list1==null){
             return list2;
         }
@@ -64,9 +57,9 @@ public class four {
     }
 
     public static void main(String[] args) {
-        ListNode4 node1 = new ListNode4(4);
-        ListNode4 node2 = new ListNode4(1);
-        ListNode4 merge = Merge(node1, node2);
+        ListNode node1 = new ListNode(4);
+        ListNode node2 = new ListNode(1);
+        ListNode merge = Merge(node1, node2);
         while (merge != null) {
             System.out.println(merge.val);
             merge=merge.next;
