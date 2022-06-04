@@ -89,7 +89,7 @@ public class second {
           pre=pre.next;
        }
        //开始反转链表,cur始终指向反转链表的第一个节点
-     ListNode cur=pre.next;
+        ListNode cur=pre.next;
        for(int i=0;i<n-m;i++){
         next=cur.next;
         cur.next=next.next;

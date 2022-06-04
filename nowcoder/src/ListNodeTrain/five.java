@@ -66,6 +66,7 @@ public class five {
         ListNode rightList=cutIntoTwo(lists,mid+1,right);
         return merge(leftList,rightList);
     }
+
     public ListNode merge(ListNode node1,ListNode node2){
         ListNode res=new ListNode(0);
         ListNode workNode=res;
