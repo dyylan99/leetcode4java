@@ -1,4 +1,4 @@
-package OneToFifty;
+package YuFaOneToFifty;
 
 import org.junit.Test;
 

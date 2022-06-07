@@ -1,8 +1,4 @@
-package OneToFifty;
-
-import org.junit.Test;
-
-import java.util.Scanner;
+package YuFaOneToFifty;
 
 /**
  * @author Dylan
