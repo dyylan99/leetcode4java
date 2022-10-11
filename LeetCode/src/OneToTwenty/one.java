@@ -13,8 +13,6 @@ import java.util.Map;
  *
  * 你可以按任意顺序返回答案。
  *
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/two-sum
  **/
 public class one {
     /**
