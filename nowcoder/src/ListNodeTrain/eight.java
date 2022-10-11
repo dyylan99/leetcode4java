@@ -77,6 +77,7 @@ public class eight {
             fast=fast.next;
             --k;
         }
+
         /**
          * 判断k是否大于0,若大于0则说明链表个数小于k,返回null
          */
