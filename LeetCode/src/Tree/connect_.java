@@ -19,7 +19,7 @@ import java.util.*;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode.cn/problems/populating-next-right-pointers-in-each-node
  * 116. 填充每个节点的下一个右侧节点指针
- * /
+ * //
  **/
 public class connect_ {
     public Node1 connect(Node1 root) {
