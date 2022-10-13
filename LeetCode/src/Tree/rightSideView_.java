@@ -17,7 +17,6 @@ public class rightSideView_ {
         /**
          * 思路:层序遍历时, 判断是否到达每一层的最后一个元素, 若到达则存到结果数组中返回
          * 建议借助队列使用迭代法
-         *
          */
         List<Integer>list=new ArrayList<>();
         if (root==null){
