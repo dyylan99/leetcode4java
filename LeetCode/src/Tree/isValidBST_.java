@@ -22,8 +22,6 @@ public class isValidBST_ {
         //    }
         //}
         //return true;
-
-
         if(root==null){
             return true;
         }
@@ -78,6 +76,5 @@ public class isValidBST_ {
         list.add(root.val);
         inorderTra(root.right,list);
     }
-
 
 }
