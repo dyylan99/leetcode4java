@@ -82,6 +82,7 @@ class MyQueue{
         }
     }
     void add(int val){
+        //TODO 真他妈巧妙
         while (!queue.isEmpty()&&val>queue.peekLast()){
             queue.removeLast();
         }
