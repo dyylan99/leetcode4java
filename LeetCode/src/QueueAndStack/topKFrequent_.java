@@ -23,7 +23,7 @@ public class topKFrequent_ {
             map.put(num,map.getOrDefault(num,0)+1);
         }
         //在优先队列中存储二元组(num,cnt),cnt表示元素值num在数组出现的次数
-        //出现次数按冲队头到队尾的顺序从大到小排,出现次数最多的在对头(相当于大顶堆)
+        //出现次数按冲队头到队尾的顺序从大到小排,出现次数最多的在队头(相当于大顶堆)
         PriorityQueue<int[]>pq=new PriorityQueue<>((p1,p2)->p2[1]-p1[1]);
         for (Map.Entry<Integer, Integer> integerIntegerEntry : map.entrySet()) {
             pq.add(new int[]{integerIntegerEntry.getKey(),integerIntegerEntry.getValue()});
