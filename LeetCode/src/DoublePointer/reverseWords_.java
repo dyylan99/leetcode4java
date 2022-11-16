@@ -4,7 +4,7 @@ package DoublePointer;
  * @author Dylan
  * @version 1.0
  * @date 2022/11/14 15:22
- * @description 给你一个字符串 s ，请你反转字符串中 单词 的顺序。
+ * @description 给你一个字符串 s ，请你反转字符串中单词的顺序。
  *
  * 单词 是由非空格字符组成的字符串。s 中使用至少一个空格将字符串中的 单词 分隔开。
  *
@@ -66,7 +66,7 @@ public class reverseWords_ {
         return res.toString();
     }
 
-    //1.去除多余字符串
+    //1.去除多余空格
     private StringBuilder removeSpace(String s){
         int start=0;
         int end=s.length()-1;
