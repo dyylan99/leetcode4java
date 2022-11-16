@@ -15,7 +15,13 @@ package DoublePointer;
  * 142. 环形链表 II
  **/
 public class detectCycle_ {
+
     public ListNode detectCycle(ListNode head) {
+        /**
+         *2x+2y=x+n(y+z)+y  --->
+         * x=(n-1)(y+z)+z
+         * 说明当快慢指针相遇时, 若让慢指针重回起点走X距离, 会和快指针在环的起点相遇(相遇后让快指针的速度变为1)
+         */
         ListNode fast=head;
         ListNode slow=head;
         while (fast!=null&&fast.next!=null){
