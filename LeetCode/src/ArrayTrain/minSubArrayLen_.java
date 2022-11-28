@@ -68,8 +68,6 @@ public class minSubArrayLen_ {
 
 
 
-
-
     @Test
     public void test(){
         int i = minSubArrayLen1(7, new int[]{2, 3, 1, 2, 4, 3});
