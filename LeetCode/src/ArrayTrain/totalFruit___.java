@@ -22,7 +22,7 @@ import java.util.*;
  *
  *904.水果成篮
  **/
-public class totalFruit_ {
+public class totalFruit___ {
 
 
     public int totalFruit(int[] fruits) {

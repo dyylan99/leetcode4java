@@ -7,9 +7,10 @@ package DoublePointer;
  * @description 给定 s 和 t 两个字符串，当它们分别被输入到空白的文本编辑器后，如果两者相等，返回 true 。# 代表退格字符。
  *
  * 注意：如果对空文本输入退格字符，文本继续为空。
+ *
  * 844:比较含退格的字符串
  **/
-public class backspaceCompare_ {
+public class backspaceCompare__ {
     //双指针法
     /**
      *一个字符是否会被删掉，只取决于该字符后面的退格符，而与该字符前面的退格符无关。

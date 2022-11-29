@@ -13,7 +13,7 @@ import java.util.Map;
  *
  *  76. 最小覆盖子串
  **/
-public class minWindow__ {
+public class minWindow___ {
     public String minWindow(String s, String t) {
         //记录滑动窗口的字符及其对应数量
         Map<Character,Integer>window=new HashMap<>();
@@ -39,15 +39,15 @@ public class minWindow__ {
             }
             //shrink左边界,找到最优位置
             while (count==needs.size()){
-
                 //记录当前解
                 if(right-left<len){
                     len=right-left;
                     start=left;
                 }
-
+                //优化当前解
                 char d=s.charAt(left);
                 left++;
+                //如果目标字符串包含刚刚被跳过的字符,那么count就要减一
                 if(needs.containsKey(d)){
                     if(needs.get(d).equals(window.get(d))){
                         count--;
