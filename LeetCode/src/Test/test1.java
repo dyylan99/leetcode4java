@@ -1,9 +1,8 @@
-package test;
+package Test;
 
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.PriorityQueue;
 
 /**
  * @author Dylan
