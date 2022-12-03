@@ -1,5 +1,7 @@
 package BackTracking;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -93,7 +95,18 @@ public class restoreIpAddresses_ {
             num++;
             restoreIpAddressesHandler(s,i+1,num);
             num--;
+            //todo 重点理解这句代码
             sb.delete(start+num,i+num+2);
+        }
+    }
+
+
+    @Test
+    public void test(){
+        String s="101023";
+        restoreIpAddressesHandler(s,0,0);
+        for (String re : res) {
+            System.out.println(re);
         }
     }
 }
