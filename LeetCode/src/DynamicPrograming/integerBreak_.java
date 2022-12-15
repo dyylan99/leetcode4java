@@ -17,7 +17,7 @@ public class integerBreak_ {
         int[]dp=new int[n+1];
         dp[2]=1;
         for (int i = 3; i <=n; i++) {
-            for(int j=1;j<=i-j;j++){
+            for(int j=1;j<=i-j;j++){ //dp[i]就代表着i被拆分的数的最大积
                 dp[i]=Math.max(dp[i],Math.max(j*(i-j),j*dp[i-j]));
             }
         }
