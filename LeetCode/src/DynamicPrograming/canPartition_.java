@@ -1,5 +1,7 @@
 package DynamicPrograming;
 
+import org.junit.Test;
+
 /**
  * @author Dylan
  * @version 1.0
@@ -30,5 +32,10 @@ public class canPartition_ {
             }
         }
         return dp[target]==target;
+    }
+
+    @Test
+    public void test(){
+        System.out.println(canPartition(new int[]{1, 3, 5, 7, 6}));
     }
 }

@@ -1,5 +1,7 @@
 package DynamicPrograming;
 
+import org.junit.Test;
+
 /**
  * @author Dylan
  * @version 1.0
@@ -24,5 +26,9 @@ public class change_ {
             }
         }
         return dp[amount];
+    }
+    @Test
+    public void test(){
+        System.out.println(change(6, new int[]{1, 2, 3, 4, 5, 6}));
     }
 }
