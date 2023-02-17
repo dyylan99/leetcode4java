@@ -1,5 +1,6 @@
 package DynamicPrograming;
 
+
 /**
  * @author Dylan
  * @version 1.0
@@ -12,11 +13,13 @@ package DynamicPrograming;
  *
  * 如果有大量输入的 S，称作 S1, S2, ... , Sk 其中 k >= 10亿，你需要依次检查它们是否为 T 的子序列。在这种情况下，你会怎样改变代码？
  *
- *
  * 392. 判断子序列
  **/
+
+
 public class isSubsequence_ {
-    public boolean isSubsequence(String s, String t) {
+    int num;
+    public boolean isSubsequence(String s, String t) {//
         /**
          * dp[i][j] 表示以下标i-1为结尾的字符串s，和以下标j-1为结尾的字符串t，相同子序列的长度为dp[i][j]。
          */
