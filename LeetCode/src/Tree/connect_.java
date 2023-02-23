@@ -39,6 +39,7 @@ public class connect_ {
         while (!q.isEmpty()){
             List<Node1>list=new ArrayList<>();
             int len=q.size();
+
             for (int i = 0; i < len; i++) {
                 Node1 remove = q.remove();
                 list.add(remove);
