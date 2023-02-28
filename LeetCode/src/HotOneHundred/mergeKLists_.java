@@ -59,8 +59,8 @@ public class mergeKLists_ {
             l1[i]=lists[i];
         }
         ListNode[] l2=new ListNode[lists.length-mid];
-        for (int i = 0; i < l2.length; i++) {
-            l1[2]=lists[i];
+        for (int i = 0,j=mid; i < l2.length; i++,j++) {
+            l2[i]=lists[j];
         }
         return mergeTwoLists(mergeKLists1(l1),mergeKLists1(l2));
     }
