@@ -14,6 +14,7 @@ import java.util.PriorityQueue;
  * 3. 合并K个升序链表
  **/
 public class mergeKLists_ {
+    //优先队列法
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode res=new ListNode();
         if (lists.length==0){
@@ -42,6 +43,7 @@ public class mergeKLists_ {
         }
         return res.next;
     }
+
     //分治法:
     public ListNode mergeKLists1(ListNode[] lists){
         if (lists==null){
