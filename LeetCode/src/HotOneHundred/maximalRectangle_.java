@@ -10,7 +10,7 @@ public class maximalRectangle_ {
     public int maximalRectangle(char[][] matrix) {
         //动态规划:
         /**
-         * dp[i][j]为第i行到第j列最长连续1的长度
+         * dp[i][j]为第i行,第1列第j列最长连续1的长度
          */
         int m=matrix.length;
         int n=matrix[0].length;
@@ -27,6 +27,8 @@ public class maximalRectangle_ {
                 int minLength=dp[i][j];
                 for (int height = 2; i>=height&&matrix[i-height][j-1]!='0'; height++) {
                     minLength=Math.min(minLength,dp[i-height+1][j]);
+
+
                     maxArea=Math.max(maxArea,height*minLength);
                 }
                 res=Math.max(maxArea,res);
