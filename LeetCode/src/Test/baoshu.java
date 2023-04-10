@@ -1,5 +1,7 @@
 package Test;
 
+import org.junit.Test;
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Scanner;
@@ -40,9 +42,20 @@ public class baoshu {
     public static void getPrime(int[]prime){
         for (int i = 2; i < prime.length; ++i) {
             if(prime[i]==0){
-                for (int j = i+i; j <prime.length ; j+=i) {
+                for (int j = 2*i; j <prime.length ; j+=i) {
                     prime[j]=1;
                 }
+            }
+        }
+    }
+
+    @Test
+    public void test(){
+        int[]nums=new int[100];
+        getPrime(nums);
+        for (int i = 2; i < nums.length; i++) {
+            if(nums[i]==0){
+                System.out.print(i+" ");
             }
         }
     }
