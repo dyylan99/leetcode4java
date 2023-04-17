@@ -52,6 +52,7 @@ public class first {
             head.next=pre;
             pre=head;
             head=next;
+
         }
 
         return pre;
