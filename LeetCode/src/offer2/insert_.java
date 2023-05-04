@@ -1,7 +1,5 @@
 package offer2;
 
-
-
 /**
  * @author Dylan
  * @version 1.0
