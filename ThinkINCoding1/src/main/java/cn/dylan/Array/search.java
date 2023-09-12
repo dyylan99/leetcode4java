@@ -1,4 +1,4 @@
-package Array;
+package cn.dylan.Array;
 
 /**
  * @author Dylan

@@ -1,4 +1,4 @@
-package HashTable;
+package cn.dylan.HashTable;
 
 /**
  * @author Dylan

@@ -1,7 +1,6 @@
-package Array;
+package cn.dylan.Array;
 
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author Dylan
