@@ -2,6 +2,7 @@ package cn.dylan.SlidingWindow;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 /**
  * @author Dylan
