@@ -12,7 +12,6 @@ package ArrayTrain;
  **/
 public class searchInsert_ {
     //0,1,3,4,5       2           middle=2    middle=0
-
     public int searchInsert(int[] nums, int target) {
         int left=0;
         int right=nums.length-1;
