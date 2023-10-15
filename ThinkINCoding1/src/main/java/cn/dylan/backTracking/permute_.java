@@ -28,7 +28,6 @@ public class permute_ {
             result.add(new ArrayList<>(path));
             return;
         }
-
         for (int i = 0; i < nums.length; i++) {
             if (used[i]){
                 continue;

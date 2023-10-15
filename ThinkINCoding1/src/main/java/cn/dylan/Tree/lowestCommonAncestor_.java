@@ -13,19 +13,20 @@ public class lowestCommonAncestor_ {
          * 对于root不为p或q的树，就从它的左子树和右子树分别查找结果，当l和r皆非空时，说明pq分布于root的两侧（因为递归访问到pq时直接返回了），
          * 因此返回root，否则返回非空的那个
          */
-        if(root==null || root==p || root==q){
+        if (root==null || root==q || root==p){
             return root;
         }
-        TreeNode first = lowestCommonAncestor(root.left, p, q);
-        TreeNode second = lowestCommonAncestor(root.right, p, q);
-        if (first!=null && second!=null){
+        TreeNode left=lowestCommonAncestor(root.left,p,q);
+        TreeNode right=lowestCommonAncestor(root.right,p,q);
+
+        if (left!=null && right!=null){
             return root;
         }
-        if (first!=null){
-            return first;
+        if (left!=null){
+            return left;
         }
-        if (second!=null){
-            return second;
+        if (right!=null){
+            return right;
         }
         return null;
     }

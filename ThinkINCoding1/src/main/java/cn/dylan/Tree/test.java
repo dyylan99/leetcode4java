@@ -2,6 +2,7 @@ package cn.dylan.Tree;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -85,6 +86,13 @@ public class test {
         } catch (Error e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Test
+    public void test3(){
+        ArrayList<Integer>list=new ArrayList<>();
+        ArrayList<String>list2=new ArrayList<>();
+        System.out.println(list.getClass()==list2.getClass());
     }
 
 
