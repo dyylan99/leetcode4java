@@ -77,6 +77,22 @@ public class groupAnagrams_ {
         }
       return new ArrayList<>(map.values());
     }
+    public List<List<String>> groupAnagrams3(String[] strs) {
+        Map<String, List<String>> map = new HashMap<>();
+        for (String str : strs) {
+            String concat = concat(str);
+            List<String> list = map.getOrDefault(concat, new ArrayList<>());
+            list.add(str);
+            map.put(concat, list);
+        }
+        return new ArrayList<>(map.values());
+    }
+
+    private String concat(String s){
+        byte[] bytes = s.getBytes();
+        Arrays.sort(bytes);
+        return new String(bytes);
+    }
 
 
 

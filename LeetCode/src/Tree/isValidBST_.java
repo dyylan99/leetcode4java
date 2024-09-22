@@ -68,8 +68,8 @@ public class isValidBST_ {
      * @param root
      * @param list
      */
-    public void inorderTra(TreeNode root, List<Integer>list){
-        if(root==null){
+    private void inorderTra(TreeNode root, List<Integer>list){
+        if (root==null){
             return;
         }
         inorderTra(root.left,list);

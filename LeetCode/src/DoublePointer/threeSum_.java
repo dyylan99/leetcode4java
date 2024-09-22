@@ -16,39 +16,43 @@ import java.util.List;
  **/
 public class threeSum_ {
     public List<List<Integer>> threeSum(int[] nums) {
-
-        //给数组升序
-        Arrays.sort(nums);
         List<List<Integer>>res=new ArrayList<>();
-        for (int i = 0; i < nums.length-2; i++) {
-            if(nums[i]>0){
+        if(nums.length<3){
+            return res;
+        }
+        //给数组升序排序
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i]>0){
                 return res;
             }
-            //当前元素和前一个元素相等,就直接跳过
-            if (i > 0 && nums[i] == nums[i - 1]) {
+            //去重
+            if (i>0&&nums[i]==nums[i-1]){
                 continue;
             }
-            //index是i右边的移动元素
-            int index=i+1;
+            int left=i+1;
             int right=nums.length-1;
-         while (right>index){
-
-             int sum=nums[i]+nums[index]+nums[right];
-
-             if (sum>0){
-                 right--;
-             }else if(sum<0){
-                 index++;
-             }else{
-                 //去重逻辑和四数之和相同
-                res.add(Arrays.asList(nums[i],nums[right],nums[index]));
-                 while (right > index && nums[right] == nums[right - 1]) right--;
-                 while (right > index && nums[index] == nums[index + 1]) index++;
-
-                 right--;
-                 index++;
-             }
-         }
+            while (left<right){
+                int sum=nums[i]+nums[left]+nums[right];
+                if (sum==0){
+                    res.add(Arrays.asList(nums[i],nums[left],nums[right]));
+                    // 需要确定的一件事: i 在此层是不变的, 和也是不变的
+                    //因此, 当nums[left]右移或者nums[right]左移时, 若他们的值其中有没变的, 那么三元组还是会重复
+                    //因此, 需要去重
+                    while (left<right&&nums[left]==nums[left+1]){
+                        left++;
+                    }
+                    while (left<right&&nums[right]==nums[right-1]){
+                        right--;
+                    }
+                    left++;
+                    right--;
+                } else if (sum<0) {
+                    left++;
+                }else{
+                    right--;
+                }
+            }
         }
         return res;
     }
